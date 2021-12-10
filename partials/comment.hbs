@@ -1,20 +1,19 @@
-{{{#if post.access}}
-<div class="comment container small">
-{{!-- 
-     <section class="post-full-comments"> --}}
-                <div id="disqus_thread"></div>
-                  <script>
-                  var disqus_config = function () {
-                    this.page.url = "{{url absolute="true"}}";
-                    this.page.identifier = "ghost-{{comment_id}}"
-                  };
-                  (function() {
-                    var d = document, s = d.createElement('script');
-                    s.src = 'https://kazaimazai.disqus.com/embed.js';
-                    s.setAttribute('data-timestamp', +new Date());
-                    (d.head || d.body).appendChild(s);
-                  })();
-                </script>
-            {{!-- </section> --}}
-</div>
+{{#if post.access}}
+    <div class="comment container small">
+    {{#post}}
+            <div id="disqus_thread"></div>
+            <script>
+            var disqus_config = function () {
+                this.page.url = "{{url absolute="true"}}";
+                this.page.identifier = "ghost-{{comment_id}}";
+            };
+            (function() {
+            var d = document, s = d.createElement('script');
+            s.src = 'https://kazaimazai.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+            })();
+            </script>
+    {{/post}}
+    </div>
 {{/if}}
