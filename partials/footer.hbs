@@ -1,19 +1,42 @@
 <footer class="site-footer container">
     <div class="footer-inner">
         <div class="footer-left">
+            
             <div class="copyright">
                 {{@site.title}} © {{date format="YYYY"}}
             </div>
         </div>
+        
+
+        {{!-- <nav class="footer-nav">
+            {{navigation type="secondary"}}
+            <a class="menu-item badge" href="https://ghost.org/" target="_blank" rel="noopener noreferrer">Published with Ghost</a>
+        </nav> --}}
 
         <nav class="footer-nav">
             {{navigation type="secondary"}}
-            <a class="menu-item badge" href="https://ghost.org/" target="_blank" rel="noopener noreferrer">Published with Ghost</a>
+            {{!-- <div class="copyright">
+                {{@site.title}} © {{date format="YYYY"}}
+            </div> --}}
+
         </nav>
+
+        {{!-- <nav class="footer-nav">
+            {{navigation type="secondary"}}
+            <a class="menu-item badge" href="https://github.com/KazaiMazai" target="_blank" rel="noopener noreferrer">Github</a>
+        </nav> --}}
 
         <div class="footer-right">
             <div class="social">
-                {{#if @site.facebook}}
+                <a class="social-item"
+                    <a class="menu-item badge" href="{{@site.url}}/terms/" target="_blank" rel="noopener noreferrer">Terms</a>
+                </a>
+                <a class="social-item"
+                    <a class="menu-item badge" href="{{@site.url}}/privacy-policy/" target="_blank" rel="noopener noreferrer">Privacy</a>   
+                </a>
+ 
+
+                {{!-- {{#if @site.facebook}}
                     <a class="social-item social-item-facebook"
                         href="{{facebook_url @site.facebook}}" target="_blank"
                         rel="noopener noreferrer" aria-label="Facebook">
@@ -27,7 +50,7 @@
                         rel="noopener noreferrer" aria-label="Twitter">
                         {{> icons/twitter}}
                     </a>
-                {{/if}}
+                {{/if}} --}}
             </div>
         </div>
     </div>
