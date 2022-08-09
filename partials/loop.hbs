@@ -35,9 +35,9 @@
             <time class="feed-date" datetime="{{date format="YYYY-MM-DD"}}">
                 {{date published_at}}
             </time>
-            <div class="feed-visibility feed-visibility-{{visibility}}">
+            {{!-- <div class="feed-visibility feed-visibility-{{visibility}}">
                 {{> "icons/star"}}
-            </div>
+            </div> --}}
             {{#if reading_time}}
                 <div class="feed-length">
                     {{reading_time}}
