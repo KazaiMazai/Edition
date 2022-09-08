@@ -1,0 +1,35 @@
+{{#get "tags" filter="slug:[{{@custom.featured_tags}}]" as |featured_tags|}}
+{{!-- {{#get "tags" include="count.posts" order="count.posts desc" limit="10" as |featured_tags|}} --}}
+{{#if featured_tags}}
+    <div class="gh-outer">
+    <section class="featured-wrapper gh-inner">
+
+        {{#if @custom.featured_title}}
+            <h2 class="featured-title">Topics</h2>
+        {{/if}}
+
+        <div class="featured-feed">
+            {{#foreach featured_tags}}
+            <article class="{{post_class}}">
+                <div class="u-placeholder horizontal">
+                    {{#if feature_image}}
+                        <img
+                            class="u-object-fit"
+                            srcset="{{> "srcset"}}"
+                            sizes="(min-width: 1256px) calc((1130px - 60px) / 3), (min-width: 992px) calc((90vw - 60px) / 3), (min-width: 768px) calc((90vw - 30px) / 2), 90vw"
+                            src="{{img_url feature_image size="m"}}"
+                            alt="{{name}}"
+                            loading="lazy"
+                        >
+                    {{/if}}
+                </div>
+                <h3 class="post-title">{{name}}</h3>
+                <a class="u-permalink" href={{url}} aria-label="{{name}}"></a>
+            </article>
+            {{/foreach}}
+        </div>
+
+    </section>
+    </div>
+{{/if}}
+{{/get}}
