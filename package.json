@@ -81,9 +81,34 @@
                 "default": true,
                 "group": "homepage"
             },
+            "featured_tags": {
+                "type": "text",
+                "default": "Featured tags",
+                "group": "homepage"
+            },
             "featured_title": {
                 "type": "text",
                 "default": "Featured articles",
+                "group": "homepage"
+            },
+            "upper_section_tag": {
+                "type": "text",
+                "default": "Upper section tag",
+                "group": "homepage"
+            },
+            "upper_section_tag_limit": {
+                "type": "text",
+                "default": "3",
+                "group": "homepage"
+            },
+            "lower_section_tag": {
+                "type": "text",
+                "default": "Lower section tag",
+                "group": "homepage"
+            },
+            "lower_section_tag_limit": {
+                "type": "text",
+                "default": "3",
                 "group": "homepage"
             },
             "feed_title": {

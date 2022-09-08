@@ -65,10 +65,12 @@
 
     {{#is "home"}}
         {{> "cover"}}
-        {{#if @custom.show_featured_posts}}
+         {{> "featured-tags"}}
+        {{!-- {{#if @custom.show_featured_posts}}
             {{> "featured-posts"}}
-        {{/if}}
+        {{/if}} --}} 
     {{/is}}
+
 
     <div class="site-content">
         {{{body}}}
