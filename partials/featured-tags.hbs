@@ -1,11 +1,10 @@
 {{#get "tags" filter="slug:[{{@custom.featured_tags}}]" as |featured_tags|}}
-{{!-- {{#get "tags" include="count.posts" order="count.posts desc" limit="10" as |featured_tags|}} --}}
 {{#if featured_tags}}
     <div class="gh-outer">
     <section class="featured-wrapper gh-inner">
 
         {{#if @custom.featured_title}}
-            <h2 class="featured-title">Topics</h2>
+            <h2 class="featured-title">Explore</h2>
         {{/if}}
 
         <div class="featured-feed">
