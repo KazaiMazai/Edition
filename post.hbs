@@ -1,7 +1,6 @@
 {{!< default}}
 
 <main class="site-main">
-
     {{#post}}
         {{> "content" width="wide"}}
     {{/post}}
@@ -9,7 +8,7 @@
     {{#if @custom.show_related_posts}}
         {{> "related-posts"}}
     {{/if}}
-
+    
     {{#post}}
         {{> "comments"}}
     {{/post}}
