@@ -55,6 +55,11 @@
     transform: translateX(0.4rem);
 }
 
+.feed:hover .feed-image {
+    -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(0%);
+}
+
 .feed + .feed {
     border-top: 1px solid var(--light-gray-color);
 }
@@ -101,6 +106,8 @@
     flex-shrink: 0;
     width: 160px;
     margin-right: 2.5rem;
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
 }
 
 .post-feed.right-thumbnail .feed-image {
