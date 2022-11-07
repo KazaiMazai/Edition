@@ -212,6 +212,16 @@
     height: 14px;
 }
 
+.feed-tag {
+    white-space: nowrap;
+    color: var(--brand-color);
+}
+
+.post-feed.expanded .feed-tag {
+    display: flex;
+    align-items: center;
+}
+ 
 .feed-length {
     white-space: nowrap;
 }
@@ -221,13 +231,22 @@
     align-items: center;
 }
 
-.post-feed.expanded :is(.feed-length, .feed-comments)::before {
+.post-feed.expanded :is(.feed-length, .feed-comments, .feed-date)::before {
     padding: 0 0.7rem;
     font-family: serif;
     font-size: 1rem;
     line-height: 1;
     content: "\02022";
 }
+
+    /* .post-feed.expanded :is(.feed-tag)::before {
+        padding: 0 0.7rem;
+        font-family: serif;
+        font-size: 1rem;
+        line-height: 1;
+        color: var(--secondary-text-color);
+        content: "\02022";
+    } */
 
 .feed-icon {
     position: absolute;

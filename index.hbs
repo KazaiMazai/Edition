@@ -26,7 +26,7 @@
 
       {{#is "home"}}
         {{#if @custom.show_featured_posts}}
-            {{#get "posts" filter="featured:true" as |featured|}}
+            {{#get "posts" include='tags' filter="featured:true" as |featured|}}
                 {{#if featured}}
                     <header class="feed-header gh-canvas">
                     {{#if @custom.featured_title}}
@@ -38,7 +38,7 @@
                     <div class="post-feed expanded gh-canvas">
                     
                         {{#foreach featured}}
-                            {{> "loop"}}
+                            {{> "tagged-loop"}}
                         {{/foreach}}
                     </div>
                 {{/if}}
@@ -90,7 +90,7 @@
     {{else}}
         <div class="post-feed expanded gh-feed gh-canvas">
             {{#foreach posts visibility="all"}}
-                {{> "loop"}}
+                {{> "tagged-loop"}}
             {{/foreach}}
         </div>
     {{/is}}
