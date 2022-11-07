@@ -190,7 +190,7 @@
     margin-top: 1.5rem;
 }
 
-.post-feed:not(.expanded) :is(.feed-date, .feed-comments) {
+.post-feed:not(.expanded) :is(.feed-date, .feed-comments, .feed-tag) {
     display: none;
 }
 
@@ -240,15 +240,6 @@
     line-height: 1;
     content: "\02022";
 }
-
-    /* .post-feed.expanded :is(.feed-tag)::before {
-        padding: 0 0.7rem;
-        font-family: serif;
-        font-size: 1rem;
-        line-height: 1;
-        color: var(--secondary-text-color);
-        content: "\02022";
-    } */
 
 .feed-icon {
     position: absolute;
