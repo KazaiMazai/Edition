@@ -41,9 +41,11 @@
 
     <div class="single-content gh-content gh-canvas">
         {{#if access}}
-            <aside class="gh-sidebar">
-                <div class="gh-toc"></div>
-            </aside> {{! The TOC will be inserted here }}
+            {{#is "post"}}
+                <aside class="gh-sidebar">
+                    <div class="gh-toc"></div>
+                </aside> {{! The TOC will be inserted here }}
+            {{/is}}
         {{/if}}
        
         {{content}}
