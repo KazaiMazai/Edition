@@ -30,14 +30,14 @@
 
     <div class="feed-wrapper">
         <h2 class="feed-title">{{title}}</h2>
-        {{!-- {{#if excerpt}}
-            <div class="feed-excerpt">{{excerpt words="20"}}</div>
-        {{/if}} --}}
-        {{#if custom_excerpt}}
+        {{#if excerpt}}
+            <div class="feed-excerpt">{{excerpt words="50"}}</div>
+        {{/if}}
+        {{!-- {{#if custom_excerpt}}
             <div class="feed-excerpt">
                 {{custom_excerpt}}
             </div>
-        {{/if}}
+        {{/if}} --}}
         <div class="feed-right">
             {{#if primary_tag}}
                     {{#primary_tag}}
