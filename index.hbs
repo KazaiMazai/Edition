@@ -85,8 +85,8 @@
                 </div>
             {{/if}}
         </header>
-        {{!-- <div class="post-feed{{#match @custom.feed_layout "!=" "Minimal"}} expanded{{/match}}{{#match @custom.feed_layout "Right thumbnail"}} right-thumbnail{{/match}}{{#match @custom.feed_layout "Text-only"}} text-only{{/match}} gh-feed gh-canvas"> --}}
-        <div class="post-feed text-only gh-feed gh-canvas">
+        <div class="post-feed{{#match @custom.feed_layout "!=" "Minimal"}} expanded{{/match}}{{#match @custom.feed_layout "Right thumbnail"}} right-thumbnail{{/match}}{{#match @custom.feed_layout "Text-only"}} text-only{{/match}} gh-feed gh-canvas">
+        {{!-- <div class="post-feed text-only gh-feed gh-canvas"> --}}
                         
             {{#foreach posts visibility="all"}}
                 {{> "loop"}}
@@ -100,7 +100,8 @@
             </div>
         </header>
 
-        <div class="post-feed expanded gh-feed gh-canvas">
+        <div class="post-feed{{#match @custom.blog_feed_layout "!=" "Minimal"}} expanded{{/match}}{{#match @custom.blog_feed_layout "Right thumbnail"}} right-thumbnail{{/match}}{{#match @custom.blog_feed_layout "Text-only"}} text-only{{/match}} gh-feed gh-canvas">
+        {{!-- <div class="post-feed expanded gh-feed gh-canvas"> --}}
             {{#foreach posts visibility="all"}}
                 {{> "blog-loop"}}
             {{/foreach}}

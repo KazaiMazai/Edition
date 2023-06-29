@@ -9,8 +9,8 @@
         </div>
     </div>
 
-    {{#match @custom.feed_layout "!=" "Text-only"}}
-    {{#match @custom.feed_layout "!=" "Minimal"}}
+    {{#match @custom.blog_feed_layout "!=" "Text-only"}}
+    {{#match @custom.blog_feed_layout "!=" "Minimal"}}
         {{#if feature_image}}
         <div class="feed-image u-placeholder rectangle">
             
@@ -29,19 +29,7 @@
     {{/match}}
 
     <div class="feed-wrapper">
-        
-        {{!-- {{#has tag= "#embed-note"}}
-            {{^has tag= "#embed-content"}} 
-                <a class="feed-title" href="{{url}}" aria-label="{{title}}">{{title}}</a>
-            {{/has}}
-            <div class="feed-excerpt-content">{{content}}</div> 
-        {{else}}
-            <h2 class="feed-title">{{title}}</h2>
-            {{#if excerpt}}
-                <div class="feed-excerpt">{{excerpt characters="200"}}</div>
-            {{/if}}
-        {{/has}} --}}
-
+  
         {{#has tag= "#embed-note"}}
             <a class="feed-title" href="{{url}}" aria-label="{{title}}">{{title}}</a>
             <div class="feed-excerpt-content">{{content}}</div> 
@@ -54,7 +42,7 @@
         {{^has tag= "#embed-note, #embed-content"}}
             <h2 class="feed-title">{{title}}</h2>
             {{#if excerpt}}
-                <div class="feed-excerpt">{{excerpt characters="200"}}</div>
+                <div class="feed-excerpt">{{excerpt words="100"}}</div>
             {{/if}}
         {{/has}}
 
@@ -92,28 +80,6 @@
         {{/has}}
     </div>
 
-
-    {{!-- {{#match @custom.feed_layout "!=" "Text-only"}}
-    {{#match @custom.feed_layout "!=" "Minimal"}}
-        {{#if feature_image}}
-        <div class="feed-image u-placeholder rectangle">
-            
-                <img
-                    class="u-object-fit"
-                    srcset="{{> "srcset"}}"
-                    sizes="(min-width: 576px) 160px, 90vw"
-                    src="{{img_url feature_image size="m"}}"
-                    alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}"
-                    loading="lazy"
-                >
-            
-        </div>
-         {{/if}}
-    {{/match}}
-    {{/match}} --}}
-
-    {{!-- <a class="u-permalink" href="{{url}}" aria-label="{{title}}"></a> --}}
- 
     {{^has tag= "#embed-note, #embed-content"}}
         <a class="u-permalink" href="{{url}}" aria-label="{{title}}"></a>
     {{/has}}

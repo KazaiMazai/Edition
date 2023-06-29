@@ -40,15 +40,12 @@
         {{/if}} --}}
         <div class="feed-right">
             {{#if primary_tag}}
-                    {{#primary_tag}}
-                        <a class="feed-tag" href="{{url}}">{{name}}</a>
-                    {{/primary_tag}}
-
+                {{#primary_tag}}
+                    <a class="feed-tag" href="{{url}}">{{name}}</a>
+                {{/primary_tag}}
             {{else}}
                 <div class="feed-tag">Private</div>
             {{/if}}
-
-
 
             <time class="feed-date" datetime="{{date format="YYYY-MM-DD"}}">
                 {{date published_at}}

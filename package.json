@@ -127,6 +127,17 @@
                 "default": "Expanded",
                 "group": "homepage"
             },
+            "blog_feed_layout": {
+                "type": "select",
+                "options": [
+                    "Expanded",
+                    "Right thumbnail",
+                    "Text-only",
+                    "Minimal"
+                ],
+                "default": "Expanded",
+                "group": "homepage"
+            },
             "show_author": {
                 "type": "boolean",
                 "default": true,
