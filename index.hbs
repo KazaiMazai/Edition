@@ -2,16 +2,20 @@
 <main class="site-main">
 
     {{#is "home"}}
-        {{#if @custom.lower_section_tag}} 
-            {{#get "tags" filter="slug:[{{@custom.lower_section_tag}}]" as |featured_tags|}}
-                 
+        {{#if @custom.upper_section_tag}} 
+            {{#get "tags" filter="slug:[{{@custom.upper_section_tag}}]" as |featured_tags|}}
+                {{!-- <header class="feed-header gh-canvas">
+                    <div class="feed-header-wrapper">
+                        <h2 class="feed-header-title">Kazai Storyboard</h2>
+                    </div>
+                </header> --}}
                 {{#foreach featured_tags}}
                     <header class="feed-header gh-canvas">
                             <div class="feed-header-wrapper">
                                 <h2 class="feed-header-title">{{name}}</h2>
                             </div>
                     </header>
-                    {{#get "pages" include="tags,authors" filter="tag:{{slug}}" limit=@custom.lower_section_tag_limit as |featured| }}
+                    {{#get "pages" include="tags,authors" filter="tag:{{slug}}" as |featured| }}
                         <div class="post-feed expanded gh-canvas">
                         {{#foreach featured}}
                             {{> "embed-loop"}}
@@ -26,30 +30,6 @@
     {{/is}} 
 
     {{#is "home"}}
-        {{#if @custom.upper_section_tag}} 
-            {{#get "tags" filter="slug:[{{@custom.upper_section_tag}}]" as |featured_tags|}}
-                 
-                {{#foreach featured_tags}}
-                    <header class="feed-header gh-canvas">
-                            <div class="feed-header-wrapper">
-                                <h2 class="feed-header-title"> <a href="{{url}}">{{name}}</a> </h2>
-                            </div>
-                    </header>
-                    {{#get "posts" include="tags,authors" filter="tag:{{slug}}" limit=@custom.upper_section_tag_limit as |featured| }}
-                        <div class="post-feed text-only gh-canvas">
-                        {{#foreach featured}}
-                            {{> "loop"}}
-                        {{/foreach}}
-                        </div>
-                    {{/get}}
-
-                {{/foreach}}
- 
-            {{/get}} 
-        {{/if}}
-    {{/is}} 
-
-      {{#is "home"}}
         {{#if @custom.show_featured_posts}}
             {{#get "posts" include='tags' filter="featured:true" as |featured|}}
                 {{#if featured}}
@@ -68,6 +48,30 @@
                     </div>
                 {{/if}}
             {{/get}}
+        {{/if}}
+    {{/is}} 
+
+    {{#is "home"}}
+        {{#if @custom.lower_section_tag}} 
+            {{#get "tags" filter="slug:[{{@custom.lower_section_tag}}]" as |featured_tags|}}
+                 
+                {{#foreach featured_tags}}
+                     <header class="feed-header gh-canvas">
+                            <div class="feed-header-wrapper">
+                                <h2 class="feed-header-title">{{name}}</h2>
+                            </div>
+                    </header>
+                    {{#get "posts" include="tags,authors" filter="tag:{{slug}}" limit=@custom.lower_section_tag_limit as |featured| }}
+                        <div class="post-feed text-only gh-canvas">
+                        {{#foreach featured}}
+                            {{> "loop"}}
+                        {{/foreach}}
+                        </div>
+                    {{/get}}
+
+                {{/foreach}}
+ 
+            {{/get}} 
         {{/if}}
     {{/is}} 
 
