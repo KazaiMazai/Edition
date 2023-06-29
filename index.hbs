@@ -10,11 +10,11 @@
                     </div>
                 </header> --}}
                 {{#foreach featured_tags}}
-                    <header class="feed-header gh-canvas">
+                    {{!-- <header class="feed-header gh-canvas">
                             <div class="feed-header-wrapper">
                                 <h2 class="feed-header-title">{{name}}</h2>
                             </div>
-                    </header>
+                    </header> --}}
                     {{#get "pages" include="tags,authors" filter="tag:{{slug}}" as |featured| }}
                         <div class="post-feed expanded gh-canvas">
                         {{#foreach featured}}
@@ -95,7 +95,7 @@
 
         <header class="feed-header gh-canvas">
             <div class="feed-header-wrapper">
-                <h2 class="feed-header-title">Blog</h2>
+                <h2 class="feed-header-title">{{@custom.blog_feed_title}}</h2>
             </div>
         </header>
 
