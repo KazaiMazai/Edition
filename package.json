@@ -95,12 +95,7 @@
                 "type": "text",
                 "default": "Upper section tag",
                 "group": "homepage"
-            },
-            "upper_section_tag_limit": {
-                "type": "text",
-                "default": "3",
-                "group": "homepage"
-            },
+            }, 
             "lower_section_tag": {
                 "type": "text",
                 "default": "Lower section tag",
@@ -114,6 +109,11 @@
             "feed_title": {
                 "type": "text",
                 "default": "Latest",
+                "group": "homepage"
+            },
+            "blog_feed_title": {
+                "type": "text",
+                "default": "Blog",
                 "group": "homepage"
             },
             "feed_layout": {
