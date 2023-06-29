@@ -29,6 +29,7 @@
         {{/if}}
     {{/is}} 
 
+
     {{#is "home"}}
         {{#if @custom.show_featured_posts}}
             {{#get "posts" include='tags' filter="featured:true" as |featured|}}
@@ -51,7 +52,7 @@
         {{/if}}
     {{/is}} 
 
-    {{#is "home"}}
+    {{!-- {{#is "home"}} --}}
         {{#if @custom.lower_section_tag}} 
             {{#get "tags" filter="slug:[{{@custom.lower_section_tag}}]" as |featured_tags|}}
                  
@@ -73,7 +74,7 @@
  
             {{/get}} 
         {{/if}}
-    {{/is}} 
+    {{!-- {{/is}}  --}}
 
     {{#is "home"}}
 
