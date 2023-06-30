@@ -41,9 +41,11 @@
 
         {{^has tag= "#embed-note, #embed-content"}}
             <h2 class="feed-title">{{title}}</h2>
-            {{#if excerpt}}
-                <div class="feed-excerpt">{{excerpt words="100"}}</div>
-            {{/if}}
+                {{#if custom_excerpt}}
+                    <div class="feed-excerpt">
+                        {{custom_excerpt}}
+                    </div>
+                {{/if}}
         {{/has}}
 
         {{^has tag= "#embed-content"}}  
@@ -62,13 +64,11 @@
                 </time>
                 
 
-                {{^has tag= "#embed-note"}}
-                    {{#if reading_time}}
-                        <div class="feed-length">
-                            {{reading_time}}
-                        </div>
-                    {{/if}}
-                {{/has}}
+                {{#if reading_time}}
+                    <div class="feed-length">
+                        {{reading_time}}
+                    </div>    
+                {{/if}}
                 
                 {{#if @site.comments_enabled}}
                     {{comment_count autowrap="div" class="feed-comments"}}

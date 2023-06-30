@@ -44,7 +44,7 @@
                     <div class="post-feed expanded gh-canvas">
                     
                         {{#foreach featured}}
-                            {{> "blog-loop"}}
+                            {{> "loop"}}
                         {{/foreach}}
                     </div>
                 {{/if}}
@@ -76,37 +76,20 @@
         {{/if}}
     {{!-- {{/is}}  --}}
 
-    {{#is "home"}}
+    
 
-        <header class="feed-header gh-canvas">
-            {{#if @custom.feed_title}}
-                <div class="feed-header-wrapper">
-                    <h2 class="feed-header-title">{{@custom.feed_title}}</h2>
-                </div>
-            {{/if}}
-        </header>
-        <div class="post-feed{{#match @custom.feed_layout "!=" "Minimal"}} expanded{{/match}}{{#match @custom.feed_layout "Right thumbnail"}} right-thumbnail{{/match}}{{#match @custom.feed_layout "Text-only"}} text-only{{/match}} gh-feed gh-canvas">
-        {{!-- <div class="post-feed text-only gh-feed gh-canvas"> --}}
-                        
-            {{#foreach posts visibility="all"}}
-                {{> "loop"}}
-            {{/foreach}}
+    <header class="feed-header gh-canvas">
+        <div class="feed-header-wrapper">
+            <h2 class="feed-header-title">{{@custom.blog_feed_title}}</h2>
         </div>
-    {{else}}
+    </header>
 
-        <header class="feed-header gh-canvas">
-            <div class="feed-header-wrapper">
-                <h2 class="feed-header-title">{{@custom.blog_feed_title}}</h2>
-            </div>
-        </header>
-
-        <div class="post-feed{{#match @custom.blog_feed_layout "!=" "Minimal"}} expanded{{/match}}{{#match @custom.blog_feed_layout "Right thumbnail"}} right-thumbnail{{/match}}{{#match @custom.blog_feed_layout "Text-only"}} text-only{{/match}} gh-feed gh-canvas">
-        {{!-- <div class="post-feed expanded gh-feed gh-canvas"> --}}
-            {{#foreach posts visibility="all"}}
-                {{> "blog-loop"}}
-            {{/foreach}}
-        </div>
-    {{/is}}
+    <div class="post-feed{{#match @custom.blog_feed_layout "!=" "Minimal"}} expanded{{/match}}{{#match @custom.blog_feed_layout "Right thumbnail"}} right-thumbnail{{/match}}{{#match @custom.blog_feed_layout "Text-only"}} text-only{{/match}} gh-feed gh-canvas">
+    {{!-- <div class="post-feed expanded gh-feed gh-canvas"> --}}
+        {{#foreach posts visibility="all"}}
+            {{> "blog-loop"}}
+        {{/foreach}}
+    </div>
 
    
     {{pagination}}
