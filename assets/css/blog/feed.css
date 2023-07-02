@@ -165,7 +165,7 @@
     overflow-y: hidden;
     font-size: 1.5rem;
     line-height: 1.4;
-    word-break: break-word;
+    /* word-break: break-word; */
     /* -webkit-line-clamp: 3; */
     -webkit-box-orient: vertical;
 }
@@ -173,16 +173,31 @@
 .feed-excerpt-content {
     display: -webkit-box;
     margin-top: 0.8rem;
+    overflow-y: hidden;
+    font-size: 1.5rem;
+    line-height: 1.4;
+    white-space: pre-wrap;
+    /* word-break: break-word; */
+    /* -webkit-line-clamp: 3; */
+    -webkit-box-orient: vertical;
+    z-index: 51;
+}
+/* 
+.feed-excerpt-content {
+    display: -webkit-box;
+    margin-top: 0.8rem;
     overflow-y: visible;
     overflow: visible;
     font-size: 1.5rem;
     line-height: 1.4;
+    
     white-space: pre-wrap;
     text-overflow: clip;
     word-break: break-word;
-    /* -webkit-line-clamp: 2; */
+    
     -webkit-box-orient: vertical;
-} 
+}  
+*/
 
 .has-serif-body .feed-excerpt {
     font-family: var(--font-serif);
