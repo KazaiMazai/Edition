@@ -186,6 +186,20 @@
 .feed-excerpt-content a:link {
    text-decoration: underline;
 }
+
+.feed-excerpt-content h2,
+.feed-excerpt-content h3,
+.feed-excerpt-content h4,
+.feed-excerpt-content h5,
+.feed-excerpt-content h6 {
+    font-size: 1.6rem;
+    font-weight: bolder;
+}
+
+.feed-excerpt-content blockquote p {
+    margin-top: -2rem; 
+    margin-bottom: -2rem; 
+}
  
 /* 
 .feed-excerpt-content {
