@@ -182,6 +182,11 @@
     -webkit-box-orient: vertical;
     z-index: 51;
 }
+
+.feed-excerpt-content a:link {
+   text-decoration: underline;
+}
+ 
 /* 
 .feed-excerpt-content {
     display: -webkit-box;
