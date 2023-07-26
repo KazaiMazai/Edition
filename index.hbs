@@ -74,14 +74,16 @@
 
         {{/get}} 
     {{/if}}
-   
+    
     <header class="feed-header gh-canvas">
         <div class="feed-header-wrapper">
-            <h2 class="feed-header-title">{{@custom.blog_feed_title}}</h2>
+            <h2 class="feed-header-title">{{@custom.feed_title}}</h2>
         </div>
     </header>
+    
 
-    <div class="post-feed{{#match @custom.feed_layout "!=" "Minimal"}} expanded{{/match}}{{#match @custom.feed_layout "Right thumbnail"}} right-thumbnail{{/match}}{{#match @custom.blog_feed_layout "Text-only"}} text-only{{/match}} gh-feed gh-canvas">
+
+    <div class="post-feed{{#match @custom.feed_layout "!=" "Minimal"}} expanded{{/match}}{{#match @custom.feed_layout "Right thumbnail"}} right-thumbnail{{/match}}{{#match @custom.feed_layout "Text-only"}} text-only{{/match}} gh-feed gh-canvas">
     {{!-- <div class="post-feed expanded gh-feed gh-canvas"> --}}
         {{#foreach posts visibility="all"}}
             {{> "blog-loop"}}

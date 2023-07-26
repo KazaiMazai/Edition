@@ -111,11 +111,6 @@
                 "default": "Latest",
                 "group": "homepage"
             },
-            "blog_feed_title": {
-                "type": "text",
-                "default": "Blog",
-                "group": "homepage"
-            },
             "feed_layout": {
                 "type": "select",
                 "options": [

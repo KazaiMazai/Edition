@@ -8,7 +8,7 @@
             {{date published_at format="DD"}}
         </div>
     </div>
-
+ 
     {{#match @custom.feed_layout "!=" "Text-only"}}
     {{#match @custom.feed_layout "!=" "Minimal"}}
         {{#if feature_image}}
@@ -27,6 +27,7 @@
          {{/if}}
     {{/match}}
     {{/match}}
+   
 
     <div class="feed-wrapper">
         
@@ -43,11 +44,11 @@
 
         {{^has tag= "#embed-note, #embed-content"}}
             <h2 class="feed-title">{{title}}</h2>
-                {{#if custom_excerpt}}
-                    <div class="feed-excerpt">
-                        {{custom_excerpt}}
-                    </div>
-                {{/if}}
+            {{#if custom_excerpt}}
+                <div class="feed-excerpt">
+                    {{custom_excerpt}}
+                </div>
+            {{/if}}
         {{/has}}
 
         {{^has tag= "#embed-content"}}  
