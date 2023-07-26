@@ -74,10 +74,11 @@
     padding: 3rem 0;
 }
 
-.post-feed.expanded:not(.text-only) .feed {
+/* comment out if need to show sparator */
+/* .post-feed.expanded:not(.text-only) .feed {
     padding: 2.5rem 0;
     border-top: 0;
-}
+} */
 
 .post-feed.right-thumbnail .feed {
     flex-direction: row-reverse;
@@ -200,6 +201,7 @@
     margin-top: -2rem; 
     margin-bottom: -2rem; 
 }
+
  
 /* 
 .feed-excerpt-content {
