@@ -53,8 +53,8 @@
     {{/is}} 
 
     
-    {{#if @custom.lower_section_tag}} 
-        {{#get "tags" filter="slug:[{{@custom.lower_section_tag}}]" as |featured_tags|}}
+    {{#if @custom.pinned_tags}} 
+        {{#get "tags" filter="slug:[{{@custom.pinned_tags}}]" as |featured_tags|}}
                 
             {{#foreach featured_tags}}
                     <header class="feed-header gh-canvas">
@@ -62,7 +62,7 @@
                             <h2 class="feed-header-title">{{name}}</h2>
                         </div>
                 </header>
-                {{#get "posts" include="tags,authors" filter="tag:{{slug}}" limit=@custom.lower_section_tag_limit as |featured| }}
+                {{#get "posts" include="tags,authors" filter="tag:{{slug}}" limit=@custom.pinned_tags_limit as |featured| }}
                     <div class="post-feed text-only gh-canvas">
                     {{#foreach featured}}
                         {{> "loop"}}

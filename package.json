@@ -96,12 +96,12 @@
                 "default": "Upper section tag",
                 "group": "homepage"
             }, 
-            "lower_section_tag": {
+            "pinned_tags": {
                 "type": "text",
-                "default": "Lower section tag",
+                "default": "Pinned tags",
                 "group": "homepage"
             },
-            "lower_section_tag_limit": {
+            "pinned_tags_limit": {
                 "type": "text",
                 "default": "3",
                 "group": "homepage"
