@@ -52,32 +52,29 @@
         {{/if}}
     {{/is}} 
 
-    {{!-- {{#is "home"}} --}}
-        {{#if @custom.lower_section_tag}} 
-            {{#get "tags" filter="slug:[{{@custom.lower_section_tag}}]" as |featured_tags|}}
-                 
-                {{#foreach featured_tags}}
-                     <header class="feed-header gh-canvas">
-                            <div class="feed-header-wrapper">
-                                <h2 class="feed-header-title">{{name}}</h2>
-                            </div>
-                    </header>
-                    {{#get "posts" include="tags,authors" filter="tag:{{slug}}" limit=@custom.lower_section_tag_limit as |featured| }}
-                        <div class="post-feed text-only gh-canvas">
-                        {{#foreach featured}}
-                            {{> "loop"}}
-                        {{/foreach}}
-                        </div>
-                    {{/get}}
-
-                {{/foreach}}
- 
-            {{/get}} 
-        {{/if}}
-    {{!-- {{/is}}  --}}
-
     
+    {{#if @custom.lower_section_tag}} 
+        {{#get "tags" filter="slug:[{{@custom.lower_section_tag}}]" as |featured_tags|}}
+                
+            {{#foreach featured_tags}}
+                    <header class="feed-header gh-canvas">
+                        <div class="feed-header-wrapper">
+                            <h2 class="feed-header-title">{{name}}</h2>
+                        </div>
+                </header>
+                {{#get "posts" include="tags,authors" filter="tag:{{slug}}" limit=@custom.lower_section_tag_limit as |featured| }}
+                    <div class="post-feed text-only gh-canvas">
+                    {{#foreach featured}}
+                        {{> "loop"}}
+                    {{/foreach}}
+                    </div>
+                {{/get}}
 
+            {{/foreach}}
+
+        {{/get}} 
+    {{/if}}
+   
     <header class="feed-header gh-canvas">
         <div class="feed-header-wrapper">
             <h2 class="feed-header-title">{{@custom.blog_feed_title}}</h2>
