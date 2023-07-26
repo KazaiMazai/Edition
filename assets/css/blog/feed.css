@@ -74,11 +74,11 @@
     padding: 3rem 0;
 }
 
-/* comment out if need to show sparator */
-/* .post-feed.expanded:not(.text-only) .feed {
+/* comment out if need to show separator */
+.post-feed.expanded:not(.right-thumbnail) .feed {
     padding: 2.5rem 0;
     border-top: 0;
-} */
+}
 
 .post-feed.right-thumbnail .feed {
     flex-direction: row-reverse;
