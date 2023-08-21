@@ -1,0 +1,25 @@
+{{#if @custom.upper_section_tag}} 
+    {{#get "tags" filter="slug:[{{@custom.upper_section_tag}}]" as |featured_tags|}}
+        {{!-- <header class="feed-header gh-canvas">
+            <div class="feed-header-wrapper">
+                <h2 class="feed-header-title">Kazai Storyboard</h2>
+            </div>
+        </header> --}}
+        {{#foreach featured_tags}}
+            {{!-- <header class="feed-header gh-canvas">
+                    <div class="feed-header-wrapper">
+                        <h2 class="feed-header-title">{{name}}</h2>
+                    </div>
+            </header> --}}
+            {{#get "pages" include="tags,authors" filter="tag:{{slug}}" as |featured| }}
+                <div class="post-feed expanded gh-canvas">
+                {{#foreach featured}}
+                    {{> "embed-loop"}}
+                {{/foreach}}
+                </div>
+            {{/get}}
+
+        {{/foreach}}
+
+    {{/get}} 
+{{/if}}
