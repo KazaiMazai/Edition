@@ -75,10 +75,10 @@
 }
 
 /* comment out if need to show separator */
-.post-feed.expanded:not(.right-thumbnail) .feed {
+/* .post-feed.expanded:not(.right-thumbnail) .feed {
     padding: 2.5rem 0;
     border-top: 0;
-}
+} */
 
 .post-feed.right-thumbnail .feed {
     flex-direction: row-reverse;
@@ -172,7 +172,8 @@
 }
 
 .feed-excerpt-content {
-    display: -webkit-box;
+    display: block; 
+    /* display: -webkit-box; */
     margin-top: 0.8rem;
     overflow-y: hidden;
     font-size: 1.5rem;
@@ -201,7 +202,6 @@
     margin-top: -2rem; 
     margin-bottom: -2rem; 
 }
-
  
 /* 
 .feed-excerpt-content {
