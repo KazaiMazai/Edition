@@ -75,10 +75,10 @@
 }
 
 /* comment out if need to show separator */
-/* .post-feed.expanded:not(.right-thumbnail) .feed {
+.post-feed.expanded:not(.right-thumbnail) .feed {
     padding: 2.5rem 0;
     border-top: 0;
-} */
+}
 
 .post-feed.right-thumbnail .feed {
     flex-direction: row-reverse;
@@ -162,7 +162,7 @@
 
 .feed-excerpt {
     display: -webkit-box;
-    margin-top: 0.8rem;
+    margin-top: 1.0rem;
     overflow-y: hidden;
     font-size: 1.5rem;
     line-height: 1.4;
@@ -174,7 +174,7 @@
 .feed-excerpt-content {
     display: block; 
     /* display: -webkit-box; */
-    margin-top: 0.8rem;
+    margin-top: 1.0rem;
     overflow-y: hidden;
     font-size: 1.5rem;
     line-height: 1.4;
@@ -202,6 +202,10 @@
     margin-top: -2rem; 
     margin-bottom: -2rem; 
 }
+
+/* .feed-excerpt-content p:last-child {
+    margin-bottom: 0rem;
+} */
  
 /* 
 .feed-excerpt-content {
@@ -237,7 +241,7 @@
 }
 
 .post-feed.expanded .feed-right {
-    margin-top: 1.5rem;
+    margin-bottom: 1.0rem;
 }
 
 .post-feed:not(.expanded) :is(.feed-date, .feed-comments, .feed-tag) {

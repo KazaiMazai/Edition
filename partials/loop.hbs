@@ -30,13 +30,7 @@
      
 
     <div class="feed-wrapper">
-        <h2 class="feed-title">{{title}}</h2>
-         {{#if custom_excerpt}}
-            <div class="feed-excerpt">
-                {{custom_excerpt}}
-            </div>
-        {{/if}}
-        
+
         <div class="feed-right">
             {{#if primary_tag}}
                 {{#primary_tag}}
@@ -62,6 +56,14 @@
                 {{> "icons/chevron-right"}}
             </div>
         </div>
+        
+        <h2 class="feed-title">{{title}}</h2>
+         {{#if custom_excerpt}}
+            <div class="feed-excerpt">
+                {{custom_excerpt}}
+            </div>
+        {{/if}}
+        
     </div>
  
     <a class="u-permalink" href="{{url}}" aria-label="{{title}}"></a>
